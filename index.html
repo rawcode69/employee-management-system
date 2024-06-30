@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="./js/index.js"></script>
+</head>
+<body class="container">
+<header class="mb-4">
+    <h1 class=" text-center mt-4">Employee Management System</h1>
+</header>
+
+<main class="row">
+    <form action="" class="col-12 col-lg-5">
+
+        <button class="btn btn-success btn-sm" id="btn-new-employee" type="button">+NEW EMPLOYEE</button>
+
+        <div class="d-flex gap-5 align-items-center justify-content-between mt-4">
+            <label for="txt-id">ID</label>
+            <input disabled type="text" id="txt-id" class="form-control" placeholder="Generated ID">
+        </div>
+        <div class="d-flex gap-5 align-items-center justify-content-between mt-2">
+            <label for="txt-name">NAME</label>
+            <input disabled type="text" id="txt-name" class="form-control" placeholder="Eg. Kasun Sampath">
+            <div class="invalid-feedback">Invalid Name</div>
+        </div>
+        <div class="d-flex gap-5 align-items-center justify-content-between mt-2">
+            <label for="txt-address">ADDRESS</label>
+            <!--            <input type="text" id="txt-address" class="form-control">-->
+            <textarea disabled id="txt-address" cols="30" rows="2"
+                      class="form-control" placeholder="Eg: No 123, Flower Road, Matara"></textarea>
+            <div class="invalid-feedback">Address Cannot be Empty</div>
+        </div>
+
+        <div class="d-flex gap-5 mt-2">
+            <label for="rb-male">GENDER</label>
+            <div class="d-flex gap-5">
+                <div class="d-flex gap-2">
+                    <label for="rb-male">Male</label>
+                    <input class="form-check-input" disabled type="radio" id="rb-male" name="gender" value="Male">
+                </div>
+                <div class="d-flex gap-2">
+                    <label for="rb-female">Female</label>
+                    <input class="form-check-input" disabled type="radio" id="rb-female" name="gender" value="Female">
+                </div>
+            </div>
+            <div class="invalid-feedback">Select a gender</div>
+        </div>
+        <!--code for the combo box-->
+        <div class="mt-2">
+            <label for="txt-name" class="form-label">Employee Department</label>
+            <select disabled id="cb-department" class="form-select">
+                <option value="No-Department">No - Department</option>
+                <option value="Academic">Academic</option>
+                <option value="Human Resource">Human Resource</option>
+                <option value="IT/SE">IT/SE</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+            </select>
+            <div class="invalid-feedback">Department Cannot be Empty</div>
+        </div>
+
+        <div class="mt-2">
+            <button id="btn-save" disabled class="btn btn-primary btn-sm">SAVE</button>
+<!--            <button id="btn-update" disabled class="btn btn-secondary btn-sm mx-2">UPDATE</button>-->
+            <button id="btn-clear" type="reset" class="btn btn-warning btn-sm">CLEAR</button>
+        </div>
+    </form>
+
+    <div class="col-12 col-lg-7">
+        <table id="tbl-employee" class="table table-hover table-bordered mt-4">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>DEPARTMENT</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4" class="text-center">
+                    No Employee to Display
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

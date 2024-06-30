@@ -1,0 +1,41 @@
+table {
+    th:first-child, td:first-child {
+        text-align: center;
+    }
+
+    td:last-child {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    td:last-child :not(tfoot) {
+        &:hover {
+            color: red;
+        }
+    }
+
+    td:nth-child(2) {
+        i {
+            padding-right: 5px;
+
+            &.bi-gender-male {
+                color: dodgerblue;
+            }
+
+            &.bi-gender-female {
+                color: orchid;
+            }
+        }
+    }
+
+    tr:focus {
+        td {
+            background-color: lightgray;
+        }
+    }
+
+}
+
+
+
+
